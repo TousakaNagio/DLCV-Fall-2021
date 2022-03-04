@@ -1,0 +1,11 @@
+svhn to ministm(src only):The accuracy is : 0.4891%  iteration: 14000 val_acc: 91.06% val_loss: 0.3061
+svhn to ministm(src & tgt): The accuracy is : 0.5799% iteration: 14000 val_acc: 88.02% val_loss: 0.3948
+svhn to ministm(tgt only): The accuracy is : 0.9758% iteration: 14000 val_acc: 97.25% val_loss: 0.0832
+
+minstm to usps(src only): The accuracy is : 0.7548579970104634% iteration: 14000 val_acc: 96.99% val_loss: 0.0997
+minstm to usps(src&tgt): The accuracy is : 0.8819133034379671% iteration: 14000 val_acc: 95.57% val_loss: 0.1387
+minstm to usps(tgt only): The accuracy is : 0.9671150971599403% iteration: 14000 val_acc: 99.34% val_loss: 0.0301
+
+usps to svhn(src only): The accuracy is : 0.25637676705593115% iteration: 14000 val_acc: 98.74% val_loss: 0.0386
+usps to svhn(src only): The accuracy is : 0.31630301167793484% iteration: 14000 val_acc: 98.68% val_loss: 0.0727
+usps to svhn(src only): The accuracy is : 0.8963967424708051% iteration: 14000 val_acc: 90.77% val_loss: 0.3035

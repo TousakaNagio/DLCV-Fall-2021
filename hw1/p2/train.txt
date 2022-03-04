@@ -1,0 +1,1005 @@
+Downloading: "https://download.pytorch.org/models/resnet50-0676ba61.pth" to /root/.cache/torch/hub/checkpoints/resnet50-0676ba61.pth
+100%
+97.8M/97.8M [00:01<00:00, 54.7MB/s]
+DeepLabv3_ResNet101(
+  (model): DeepLabV3(
+    (backbone): IntermediateLayerGetter(
+      (conv1): Conv2d(3, 64, kernel_size=(7, 7), stride=(2, 2), padding=(3, 3), bias=False)
+      (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace=True)
+      (maxpool): MaxPool2d(kernel_size=3, stride=2, padding=1, dilation=1, ceil_mode=False)
+      (layer1): Sequential(
+        (0): Bottleneck(
+          (conv1): Conv2d(64, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (conv3): Conv2d(64, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (bn3): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(inplace=True)
+          (downsample): Sequential(
+            (0): Conv2d(64, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+        (1): Bottleneck(
+          (conv1): Conv2d(256, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (conv3): Conv2d(64, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (bn3): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(inplace=True)
+        )
+        (2): Bottleneck(
+          (conv1): Conv2d(256, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (conv3): Conv2d(64, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (bn3): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(inplace=True)
+        )
+      )
+      (layer2): Sequential(
+        (0): Bottleneck(
+          (conv1): Conv2d(256, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+          (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (conv3): Conv2d(128, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (bn3): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(inplace=True)
+          (downsample): Sequential(
+            (0): Conv2d(256, 512, kernel_size=(1, 1), stride=(2, 2), bias=False)
+            (1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+        (1): Bottleneck(
+          (conv1): Conv2d(512, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (conv3): Conv2d(128, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (bn3): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(inplace=True)
+        )
+        (2): Bottleneck(
+          (conv1): Conv2d(512, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (conv3): Conv2d(128, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (bn3): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(inplace=True)
+        )
+        (3): Bottleneck(
+          (conv1): Conv2d(512, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (conv3): Conv2d(128, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (bn3): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(inplace=True)
+        )
+      )
+      (layer3): Sequential(
+        (0): Bottleneck(
+          (conv1): Conv2d(512, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (conv3): Conv2d(256, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (bn3): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(inplace=True)
+          (downsample): Sequential(
+            (0): Conv2d(512, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (1): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+        (1): Bottleneck(
+          (conv1): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(2, 2), dilation=(2, 2), bias=False)
+          (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (conv3): Conv2d(256, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (bn3): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(inplace=True)
+        )
+        (2): Bottleneck(
+          (conv1): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(2, 2), dilation=(2, 2), bias=False)
+          (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (conv3): Conv2d(256, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (bn3): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(inplace=True)
+        )
+        (3): Bottleneck(
+          (conv1): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(2, 2), dilation=(2, 2), bias=False)
+          (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (conv3): Conv2d(256, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (bn3): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(inplace=True)
+        )
+        (4): Bottleneck(
+          (conv1): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(2, 2), dilation=(2, 2), bias=False)
+          (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (conv3): Conv2d(256, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (bn3): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(inplace=True)
+        )
+        (5): Bottleneck(
+          (conv1): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(2, 2), dilation=(2, 2), bias=False)
+          (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (conv3): Conv2d(256, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (bn3): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(inplace=True)
+        )
+      )
+      (layer4): Sequential(
+        (0): Bottleneck(
+          (conv1): Conv2d(1024, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(2, 2), dilation=(2, 2), bias=False)
+          (bn2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (conv3): Conv2d(512, 2048, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (bn3): BatchNorm2d(2048, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(inplace=True)
+          (downsample): Sequential(
+            (0): Conv2d(1024, 2048, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (1): BatchNorm2d(2048, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+        (1): Bottleneck(
+          (conv1): Conv2d(2048, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(4, 4), dilation=(4, 4), bias=False)
+          (bn2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (conv3): Conv2d(512, 2048, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (bn3): BatchNorm2d(2048, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(inplace=True)
+        )
+        (2): Bottleneck(
+          (conv1): Conv2d(2048, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(4, 4), dilation=(4, 4), bias=False)
+          (bn2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (conv3): Conv2d(512, 2048, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (bn3): BatchNorm2d(2048, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(inplace=True)
+        )
+      )
+    )
+    (classifier): DeepLabHead(
+      (0): ASPP(
+        (convs): ModuleList(
+          (0): Sequential(
+            (0): Conv2d(2048, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            (2): ReLU()
+          )
+          (1): ASPPConv(
+            (0): Conv2d(2048, 256, kernel_size=(3, 3), stride=(1, 1), padding=(12, 12), dilation=(12, 12), bias=False)
+            (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            (2): ReLU()
+          )
+          (2): ASPPConv(
+            (0): Conv2d(2048, 256, kernel_size=(3, 3), stride=(1, 1), padding=(24, 24), dilation=(24, 24), bias=False)
+            (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            (2): ReLU()
+          )
+          (3): ASPPConv(
+            (0): Conv2d(2048, 256, kernel_size=(3, 3), stride=(1, 1), padding=(36, 36), dilation=(36, 36), bias=False)
+            (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            (2): ReLU()
+          )
+          (4): ASPPPooling(
+            (0): AdaptiveAvgPool2d(output_size=1)
+            (1): Conv2d(2048, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            (3): ReLU()
+          )
+        )
+        (project): Sequential(
+          (0): Conv2d(1280, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (2): ReLU()
+          (3): Dropout(p=0.5, inplace=False)
+        )
+      )
+      (1): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (3): ReLU()
+      (4): Conv2d(256, 7, kernel_size=(1, 1), stride=(1, 1))
+    )
+  )
+)
+/usr/local/lib/python3.7/dist-packages/torch/nn/functional.py:718: UserWarning: Named tensors and all their associated APIs are an experimental feature and subject to change. Please do not use them for anything important until they are released as stable. (Triggered internally at  /pytorch/c10/core/TensorImpl.h:1156.)
+  return torch.max_pool2d(input, kernel_size, stride, padding, dilation, ceil_mode)
+Train Epoch: 0 [400/2000 (20%)]	Iteration: 50	Loss: 0.711512
+Train Epoch: 0 [800/2000 (40%)]	Iteration: 100	Loss: 0.575305
+Train Epoch: 0 [1200/2000 (60%)]	Iteration: 150	Loss: 0.643764
+Train Epoch: 0 [1600/2000 (80%)]	Iteration: 200	Loss: 0.797828
+Val set: Average loss: 0.0571
+class #0 : 0.72205
+class #1 : 0.86395
+class #2 : 0.25443
+class #3 : 0.70849
+class #4 : 0.66987
+class #5 : 0.60685
+mean_iou: 0.637606
+model saved to ckpt/test/model.pkl-201
+Train Epoch: 1 [0/2000 (0%)]	Iteration: 250	Loss: 0.891445
+Train Epoch: 1 [400/2000 (20%)]	Iteration: 300	Loss: 0.618139
+Train Epoch: 1 [800/2000 (40%)]	Iteration: 350	Loss: 0.608764
+Train Epoch: 1 [1200/2000 (60%)]	Iteration: 400	Loss: 0.796097
+Val set: Average loss: 0.0520
+class #0 : 0.72665
+class #1 : 0.87161
+class #2 : 0.19614
+class #3 : 0.75041
+class #4 : 0.67581
+class #5 : 0.60645
+mean_iou: 0.637846
+model saved to ckpt/test/model.pkl-401
+Train Epoch: 1 [1600/2000 (80%)]	Iteration: 450	Loss: 0.627463
+Train Epoch: 2 [0/2000 (0%)]	Iteration: 500	Loss: 0.540658
+Train Epoch: 2 [400/2000 (20%)]	Iteration: 550	Loss: 0.488470
+Train Epoch: 2 [800/2000 (40%)]	Iteration: 600	Loss: 0.400231
+Val set: Average loss: 0.0555
+class #0 : 0.67946
+class #1 : 0.85159
+class #2 : 0.31533
+class #3 : 0.74374
+class #4 : 0.68122
+class #5 : 0.64610
+mean_iou: 0.652908
+model saved to ckpt/test/model.pkl-601
+Train Epoch: 2 [1200/2000 (60%)]	Iteration: 650	Loss: 0.455115
+Train Epoch: 2 [1600/2000 (80%)]	Iteration: 700	Loss: 0.734982
+Train Epoch: 3 [0/2000 (0%)]	Iteration: 750	Loss: 0.555898
+Train Epoch: 3 [400/2000 (20%)]	Iteration: 800	Loss: 0.503691
+Val set: Average loss: 0.0530
+class #0 : 0.74436
+class #1 : 0.86067
+class #2 : 0.31869
+class #3 : 0.71277
+class #4 : 0.71579
+class #5 : 0.70457
+mean_iou: 0.676141
+model saved to ckpt/test/model.pkl-801
+Train Epoch: 3 [800/2000 (40%)]	Iteration: 850	Loss: 0.372219
+Train Epoch: 3 [1200/2000 (60%)]	Iteration: 900	Loss: 0.530406
+Train Epoch: 3 [1600/2000 (80%)]	Iteration: 950	Loss: 1.031471
+Train Epoch: 4 [0/2000 (0%)]	Iteration: 1000	Loss: 0.614370
+Val set: Average loss: 0.0586
+class #0 : 0.71940
+class #1 : 0.85022
+class #2 : 0.09611
+class #3 : 0.75860
+class #4 : 0.69113
+class #5 : 0.62204
+mean_iou: 0.622915
+Train Epoch: 4 [400/2000 (20%)]	Iteration: 1050	Loss: 0.843762
+Train Epoch: 4 [800/2000 (40%)]	Iteration: 1100	Loss: 0.424035
+Train Epoch: 4 [1200/2000 (60%)]	Iteration: 1150	Loss: 0.514991
+Train Epoch: 4 [1600/2000 (80%)]	Iteration: 1200	Loss: 0.355200
+Val set: Average loss: 0.0609
+class #0 : 0.66428
+class #1 : 0.82341
+class #2 : 0.04160
+class #3 : 0.80053
+class #4 : 0.35360
+class #5 : 0.64850
+mean_iou: 0.555320
+Train Epoch: 5 [0/2000 (0%)]	Iteration: 1250	Loss: 0.416260
+Train Epoch: 5 [400/2000 (20%)]	Iteration: 1300	Loss: 0.603287
+Train Epoch: 5 [800/2000 (40%)]	Iteration: 1350	Loss: 0.372653
+Train Epoch: 5 [1200/2000 (60%)]	Iteration: 1400	Loss: 0.657416
+Val set: Average loss: 0.0450
+class #0 : 0.73515
+class #1 : 0.87551
+class #2 : 0.27554
+class #3 : 0.76297
+class #4 : 0.70493
+class #5 : 0.68353
+mean_iou: 0.672939
+Train Epoch: 5 [1600/2000 (80%)]	Iteration: 1450	Loss: 0.428648
+Train Epoch: 6 [0/2000 (0%)]	Iteration: 1500	Loss: 0.575100
+Train Epoch: 6 [400/2000 (20%)]	Iteration: 1550	Loss: 0.587693
+Train Epoch: 6 [800/2000 (40%)]	Iteration: 1600	Loss: 0.322613
+Val set: Average loss: 0.0449
+class #0 : 0.73977
+class #1 : 0.88502
+class #2 : 0.32834
+class #3 : 0.76901
+class #4 : 0.73170
+class #5 : 0.68078
+mean_iou: 0.689105
+model saved to ckpt/test/model.pkl-1601
+Train Epoch: 6 [1200/2000 (60%)]	Iteration: 1650	Loss: 0.499511
+Train Epoch: 6 [1600/2000 (80%)]	Iteration: 1700	Loss: 0.191738
+Train Epoch: 7 [0/2000 (0%)]	Iteration: 1750	Loss: 0.530072
+Train Epoch: 7 [400/2000 (20%)]	Iteration: 1800	Loss: 0.919493
+Val set: Average loss: 0.0431
+class #0 : 0.74916
+class #1 : 0.88353
+class #2 : 0.31049
+class #3 : 0.78583
+class #4 : 0.73334
+class #5 : 0.70695
+mean_iou: 0.694884
+model saved to ckpt/test/model.pkl-1801
+Train Epoch: 7 [800/2000 (40%)]	Iteration: 1850	Loss: 0.764651
+Train Epoch: 7 [1200/2000 (60%)]	Iteration: 1900	Loss: 0.301004
+Train Epoch: 7 [1600/2000 (80%)]	Iteration: 1950	Loss: 0.397086
+Train Epoch: 8 [0/2000 (0%)]	Iteration: 2000	Loss: 0.496098
+Val set: Average loss: 0.0497
+class #0 : 0.75069
+class #1 : 0.87339
+class #2 : 0.22291
+class #3 : 0.74566
+class #4 : 0.70203
+class #5 : 0.62392
+mean_iou: 0.653101
+Train Epoch: 8 [400/2000 (20%)]	Iteration: 2050	Loss: 0.541462
+Train Epoch: 8 [800/2000 (40%)]	Iteration: 2100	Loss: 0.451496
+Train Epoch: 8 [1200/2000 (60%)]	Iteration: 2150	Loss: 0.498009
+Train Epoch: 8 [1600/2000 (80%)]	Iteration: 2200	Loss: 0.245610
+Val set: Average loss: 0.0436
+class #0 : 0.73373
+class #1 : 0.87296
+class #2 : 0.29217
+class #3 : 0.80104
+class #4 : 0.70097
+class #5 : 0.71857
+mean_iou: 0.686574
+Train Epoch: 9 [0/2000 (0%)]	Iteration: 2250	Loss: 0.448292
+Train Epoch: 9 [400/2000 (20%)]	Iteration: 2300	Loss: 0.311270
+Train Epoch: 9 [800/2000 (40%)]	Iteration: 2350	Loss: 0.285267
+Train Epoch: 9 [1200/2000 (60%)]	Iteration: 2400	Loss: 0.427259
+Val set: Average loss: 0.0402
+class #0 : 0.75505
+class #1 : 0.89109
+class #2 : 0.31297
+class #3 : 0.80280
+class #4 : 0.72820
+class #5 : 0.70604
+mean_iou: 0.699359
+model saved to ckpt/test/model.pkl-2401
+Train Epoch: 9 [1600/2000 (80%)]	Iteration: 2450	Loss: 0.391842
+Train Epoch: 10 [0/2000 (0%)]	Iteration: 2500	Loss: 0.290072
+Train Epoch: 10 [400/2000 (20%)]	Iteration: 2550	Loss: 0.502998
+Train Epoch: 10 [800/2000 (40%)]	Iteration: 2600	Loss: 0.389898
+Val set: Average loss: 0.0421
+class #0 : 0.75102
+class #1 : 0.89109
+class #2 : 0.35123
+class #3 : 0.79836
+class #4 : 0.71606
+class #5 : 0.69899
+mean_iou: 0.701124
+model saved to ckpt/test/model.pkl-2601
+Train Epoch: 10 [1200/2000 (60%)]	Iteration: 2650	Loss: 0.493659
+Train Epoch: 10 [1600/2000 (80%)]	Iteration: 2700	Loss: 0.406171
+Train Epoch: 11 [0/2000 (0%)]	Iteration: 2750	Loss: 0.382648
+Train Epoch: 11 [400/2000 (20%)]	Iteration: 2800	Loss: 0.363480
+Val set: Average loss: 0.0394
+class #0 : 0.75690
+class #1 : 0.89206
+class #2 : 0.32691
+class #3 : 0.78213
+class #4 : 0.75668
+class #5 : 0.72455
+mean_iou: 0.706539
+model saved to ckpt/test/model.pkl-2801
+Train Epoch: 11 [800/2000 (40%)]	Iteration: 2850	Loss: 0.335055
+Train Epoch: 11 [1200/2000 (60%)]	Iteration: 2900	Loss: 0.274435
+Train Epoch: 11 [1600/2000 (80%)]	Iteration: 2950	Loss: 0.457899
+Train Epoch: 12 [0/2000 (0%)]	Iteration: 3000	Loss: 0.477095
+Val set: Average loss: 0.0462
+class #0 : 0.73854
+class #1 : 0.87105
+class #2 : 0.27656
+class #3 : 0.79647
+class #4 : 0.69513
+class #5 : 0.66513
+mean_iou: 0.673811
+Train Epoch: 12 [400/2000 (20%)]	Iteration: 3050	Loss: 0.427296
+Train Epoch: 12 [800/2000 (40%)]	Iteration: 3100	Loss: 0.411945
+Train Epoch: 12 [1200/2000 (60%)]	Iteration: 3150	Loss: 0.269379
+Train Epoch: 12 [1600/2000 (80%)]	Iteration: 3200	Loss: 0.579618
+Val set: Average loss: 0.0461
+class #0 : 0.73042
+class #1 : 0.88225
+class #2 : 0.25708
+class #3 : 0.77860
+class #4 : 0.67945
+class #5 : 0.66980
+mean_iou: 0.666264
+Train Epoch: 13 [0/2000 (0%)]	Iteration: 3250	Loss: 0.380574
+Train Epoch: 13 [400/2000 (20%)]	Iteration: 3300	Loss: 0.257707
+Train Epoch: 13 [800/2000 (40%)]	Iteration: 3350	Loss: 0.319419
+Train Epoch: 13 [1200/2000 (60%)]	Iteration: 3400	Loss: 0.362324
+Val set: Average loss: 0.0391
+class #0 : 0.76291
+class #1 : 0.89395
+class #2 : 0.37853
+class #3 : 0.80107
+class #4 : 0.70102
+class #5 : 0.70492
+mean_iou: 0.707067
+model saved to ckpt/test/model.pkl-3401
+Train Epoch: 13 [1600/2000 (80%)]	Iteration: 3450	Loss: 0.151092
+Train Epoch: 14 [0/2000 (0%)]	Iteration: 3500	Loss: 0.493857
+Train Epoch: 14 [400/2000 (20%)]	Iteration: 3550	Loss: 0.342068
+Train Epoch: 14 [800/2000 (40%)]	Iteration: 3600	Loss: 0.509673
+Val set: Average loss: 0.0404
+class #0 : 0.76872
+class #1 : 0.89322
+class #2 : 0.35810
+class #3 : 0.76916
+class #4 : 0.73840
+class #5 : 0.72752
+mean_iou: 0.709186
+model saved to ckpt/test/model.pkl-3601
+Train Epoch: 14 [1200/2000 (60%)]	Iteration: 3650	Loss: 0.431604
+Train Epoch: 14 [1600/2000 (80%)]	Iteration: 3700	Loss: 0.491102
+Train Epoch: 15 [0/2000 (0%)]	Iteration: 3750	Loss: 0.288747
+Train Epoch: 15 [400/2000 (20%)]	Iteration: 3800	Loss: 0.595583
+Val set: Average loss: 0.0417
+class #0 : 0.75647
+class #1 : 0.88541
+class #2 : 0.34615
+class #3 : 0.79662
+class #4 : 0.65484
+class #5 : 0.71032
+mean_iou: 0.691636
+Train Epoch: 15 [800/2000 (40%)]	Iteration: 3850	Loss: 0.171289
+Train Epoch: 15 [1200/2000 (60%)]	Iteration: 3900	Loss: 0.448975
+Train Epoch: 15 [1600/2000 (80%)]	Iteration: 3950	Loss: 0.228240
+Train Epoch: 16 [0/2000 (0%)]	Iteration: 4000	Loss: 0.241630
+Val set: Average loss: 0.0582
+class #0 : 0.71043
+class #1 : 0.81325
+class #2 : 0.30329
+class #3 : 0.79909
+class #4 : 0.63152
+class #5 : 0.57973
+mean_iou: 0.639551
+Train Epoch: 16 [400/2000 (20%)]	Iteration: 4050	Loss: 0.384017
+Train Epoch: 16 [800/2000 (40%)]	Iteration: 4100	Loss: 0.136185
+Train Epoch: 16 [1200/2000 (60%)]	Iteration: 4150	Loss: 0.405026
+Train Epoch: 16 [1600/2000 (80%)]	Iteration: 4200	Loss: 0.536409
+Val set: Average loss: 0.0481
+class #0 : 0.73763
+class #1 : 0.86545
+class #2 : 0.28429
+class #3 : 0.73916
+class #4 : 0.72367
+class #5 : 0.54289
+mean_iou: 0.648848
+Train Epoch: 17 [0/2000 (0%)]	Iteration: 4250	Loss: 0.229663
+Train Epoch: 17 [400/2000 (20%)]	Iteration: 4300	Loss: 0.204423
+Train Epoch: 17 [800/2000 (40%)]	Iteration: 4350	Loss: 0.308892
+Train Epoch: 17 [1200/2000 (60%)]	Iteration: 4400	Loss: 0.192375
+Val set: Average loss: 0.0390
+class #0 : 0.76156
+class #1 : 0.89411
+class #2 : 0.37008
+class #3 : 0.80353
+class #4 : 0.74543
+class #5 : 0.70598
+mean_iou: 0.713448
+model saved to ckpt/test/model.pkl-4401
+Train Epoch: 17 [1600/2000 (80%)]	Iteration: 4450	Loss: 0.459730
+Train Epoch: 18 [0/2000 (0%)]	Iteration: 4500	Loss: 0.528279
+Train Epoch: 18 [400/2000 (20%)]	Iteration: 4550	Loss: 0.375363
+Train Epoch: 18 [800/2000 (40%)]	Iteration: 4600	Loss: 0.339295
+Val set: Average loss: 0.0409
+class #0 : 0.74689
+class #1 : 0.88816
+class #2 : 0.37272
+class #3 : 0.80859
+class #4 : 0.72419
+class #5 : 0.68963
+mean_iou: 0.705029
+Train Epoch: 18 [1200/2000 (60%)]	Iteration: 4650	Loss: 0.489224
+Train Epoch: 18 [1600/2000 (80%)]	Iteration: 4700	Loss: 0.685108
+Train Epoch: 19 [0/2000 (0%)]	Iteration: 4750	Loss: 0.292070
+Train Epoch: 19 [400/2000 (20%)]	Iteration: 4800	Loss: 0.381549
+Val set: Average loss: 0.0395
+class #0 : 0.75995
+class #1 : 0.89316
+class #2 : 0.35962
+class #3 : 0.79223
+class #4 : 0.73054
+class #5 : 0.70843
+mean_iou: 0.707322
+Train Epoch: 19 [800/2000 (40%)]	Iteration: 4850	Loss: 0.435707
+Train Epoch: 19 [1200/2000 (60%)]	Iteration: 4900	Loss: 0.486852
+Train Epoch: 19 [1600/2000 (80%)]	Iteration: 4950	Loss: 0.331873
+Train Epoch: 20 [0/2000 (0%)]	Iteration: 5000	Loss: 0.293738
+Val set: Average loss: 0.0455
+class #0 : 0.75167
+class #1 : 0.87271
+class #2 : 0.30751
+class #3 : 0.80922
+class #4 : 0.74697
+class #5 : 0.68316
+mean_iou: 0.695205
+Train Epoch: 20 [400/2000 (20%)]	Iteration: 5050	Loss: 0.246225
+Train Epoch: 20 [800/2000 (40%)]	Iteration: 5100	Loss: 0.281009
+Train Epoch: 20 [1200/2000 (60%)]	Iteration: 5150	Loss: 0.259749
+Train Epoch: 20 [1600/2000 (80%)]	Iteration: 5200	Loss: 0.417415
+Val set: Average loss: 0.0381
+class #0 : 0.76502
+class #1 : 0.88654
+class #2 : 0.39499
+class #3 : 0.81025
+class #4 : 0.72944
+class #5 : 0.72700
+mean_iou: 0.718873
+model saved to ckpt/test/model.pkl-5201
+Train Epoch: 21 [0/2000 (0%)]	Iteration: 5250	Loss: 0.274766
+Train Epoch: 21 [400/2000 (20%)]	Iteration: 5300	Loss: 0.354203
+Train Epoch: 21 [800/2000 (40%)]	Iteration: 5350	Loss: 0.192138
+Train Epoch: 21 [1200/2000 (60%)]	Iteration: 5400	Loss: 0.172398
+Val set: Average loss: 0.0377
+class #0 : 0.77761
+class #1 : 0.89688
+class #2 : 0.37060
+class #3 : 0.74761
+class #4 : 0.76131
+class #5 : 0.72613
+mean_iou: 0.713358
+Train Epoch: 21 [1600/2000 (80%)]	Iteration: 5450	Loss: 0.407258
+Train Epoch: 22 [0/2000 (0%)]	Iteration: 5500	Loss: 0.298104
+Train Epoch: 22 [400/2000 (20%)]	Iteration: 5550	Loss: 0.575723
+Train Epoch: 22 [800/2000 (40%)]	Iteration: 5600	Loss: 0.410707
+Val set: Average loss: 0.0375
+class #0 : 0.76991
+class #1 : 0.89416
+class #2 : 0.40198
+class #3 : 0.79877
+class #4 : 0.74450
+class #5 : 0.74514
+mean_iou: 0.725743
+model saved to ckpt/test/model.pkl-5601
+---------------------------------------------------------------------------
+KeyboardInterrupt                         Traceback (most recent call last)
+<ipython-input-7-bdf55ec80354> in <module>()
+     67     # config = parser.parse_args()
+     68     # print(config)
+---> 69     main(parameter)
+
+5 frames
+/usr/local/lib/python3.7/dist-packages/torch/optim/_functional.py in adam(params, grads, exp_avgs, exp_avg_sqs, max_exp_avg_sqs, state_steps, amsgrad, beta1, beta2, lr, weight_decay, eps)
+     92             denom = (max_exp_avg_sqs[i].sqrt() / math.sqrt(bias_correction2)).add_(eps)
+     93         else:
+---> 94             denom = (exp_avg_sq.sqrt() / math.sqrt(bias_correction2)).add_(eps)
+     95 
+     96         step_size = lr / bias_correction1
+
+KeyboardInterrupt: 
+
+model loaded from ckpt2/test/model.pkl-5601
+/usr/local/lib/python3.7/dist-packages/torch/nn/functional.py:718: UserWarning: Named tensors and all their associated APIs are an experimental feature and subject to change. Please do not use them for anything important until they are released as stable. (Triggered internally at  /pytorch/c10/core/TensorImpl.h:1156.)
+  return torch.max_pool2d(input, kernel_size, stride, padding, dilation, ceil_mode)
+Val set: Average loss: 0.0375
+class #0 : 0.76991
+class #1 : 0.89416
+class #2 : 0.40198
+class #3 : 0.79877
+class #4 : 0.74450
+class #5 : 0.74514
+mean_iou: 0.725743
+Train Epoch: 0 [392/2000 (20%)]	Iteration: 5650	Loss: 0.384938
+Train Epoch: 0 [792/2000 (40%)]	Iteration: 5700	Loss: 0.301032
+Train Epoch: 0 [1192/2000 (60%)]	Iteration: 5750	Loss: 0.293098
+Train Epoch: 0 [1592/2000 (80%)]	Iteration: 5800	Loss: 0.194416
+Val set: Average loss: 0.0365
+class #0 : 0.76807
+class #1 : 0.90060
+class #2 : 0.39218
+class #3 : 0.79366
+class #4 : 0.75454
+class #5 : 0.72707
+mean_iou: 0.722687
+Train Epoch: 0 [1992/2000 (100%)]	Iteration: 5850	Loss: 0.448117
+Train Epoch: 1 [392/2000 (20%)]	Iteration: 5900	Loss: 0.504937
+Train Epoch: 1 [792/2000 (40%)]	Iteration: 5950	Loss: 0.501203
+Train Epoch: 1 [1192/2000 (60%)]	Iteration: 6000	Loss: 0.387391
+Val set: Average loss: 0.0405
+class #0 : 0.76927
+class #1 : 0.88828
+class #2 : 0.36402
+class #3 : 0.78953
+class #4 : 0.70233
+class #5 : 0.69320
+mean_iou: 0.701104
+Train Epoch: 1 [1592/2000 (80%)]	Iteration: 6050	Loss: 0.155599
+Train Epoch: 1 [1992/2000 (100%)]	Iteration: 6100	Loss: 0.723673
+Train Epoch: 2 [392/2000 (20%)]	Iteration: 6150	Loss: 0.359943
+Train Epoch: 2 [792/2000 (40%)]	Iteration: 6200	Loss: 0.212619
+Val set: Average loss: 0.0367
+class #0 : 0.76359
+class #1 : 0.89260
+class #2 : 0.39712
+class #3 : 0.77583
+class #4 : 0.76433
+class #5 : 0.73924
+mean_iou: 0.722120
+Train Epoch: 2 [1192/2000 (60%)]	Iteration: 6250	Loss: 0.402472
+Train Epoch: 2 [1592/2000 (80%)]	Iteration: 6300	Loss: 0.238719
+Train Epoch: 2 [1992/2000 (100%)]	Iteration: 6350	Loss: 0.100013
+Train Epoch: 3 [392/2000 (20%)]	Iteration: 6400	Loss: 0.480450
+Val set: Average loss: 0.0376
+class #0 : 0.77386
+class #1 : 0.89521
+class #2 : 0.40465
+class #3 : 0.77555
+class #4 : 0.75134
+class #5 : 0.71312
+mean_iou: 0.718952
+Train Epoch: 3 [792/2000 (40%)]	Iteration: 6450	Loss: 0.469165
+Train Epoch: 3 [1192/2000 (60%)]	Iteration: 6500	Loss: 0.257194
+Train Epoch: 3 [1592/2000 (80%)]	Iteration: 6550	Loss: 0.435701
+Train Epoch: 3 [1992/2000 (100%)]	Iteration: 6600	Loss: 0.261879
+Val set: Average loss: 0.0444
+class #0 : 0.72227
+class #1 : 0.87241
+class #2 : 0.25019
+class #3 : 0.74865
+class #4 : 0.73123
+class #5 : 0.61666
+mean_iou: 0.656901
+Train Epoch: 4 [392/2000 (20%)]	Iteration: 6650	Loss: 0.243739
+Train Epoch: 4 [792/2000 (40%)]	Iteration: 6700	Loss: 0.328688
+Train Epoch: 4 [1192/2000 (60%)]	Iteration: 6750	Loss: 0.513382
+Train Epoch: 4 [1592/2000 (80%)]	Iteration: 6800	Loss: 0.270613
+Val set: Average loss: 0.0363
+class #0 : 0.76286
+class #1 : 0.89680
+class #2 : 0.44436
+class #3 : 0.78480
+class #4 : 0.75621
+class #5 : 0.72770
+mean_iou: 0.728789
+model saved to ckpt2/test/model.pkl-6801
+Train Epoch: 4 [1992/2000 (100%)]	Iteration: 6850	Loss: 0.350393
+Train Epoch: 5 [392/2000 (20%)]	Iteration: 6900	Loss: 0.196589
+Train Epoch: 5 [792/2000 (40%)]	Iteration: 6950	Loss: 0.209124
+Train Epoch: 5 [1192/2000 (60%)]	Iteration: 7000	Loss: 0.249916
+Val set: Average loss: 0.0375
+class #0 : 0.75790
+class #1 : 0.89100
+class #2 : 0.41531
+class #3 : 0.79756
+class #4 : 0.74445
+class #5 : 0.72409
+mean_iou: 0.721718
+Train Epoch: 5 [1592/2000 (80%)]	Iteration: 7050	Loss: 0.446496
+Train Epoch: 5 [1992/2000 (100%)]	Iteration: 7100	Loss: 0.406582
+Train Epoch: 6 [392/2000 (20%)]	Iteration: 7150	Loss: 0.211802
+Train Epoch: 6 [792/2000 (40%)]	Iteration: 7200	Loss: 0.249097
+Val set: Average loss: 0.0384
+class #0 : 0.76421
+class #1 : 0.89171
+class #2 : 0.38667
+class #3 : 0.80291
+class #4 : 0.75900
+class #5 : 0.72823
+mean_iou: 0.722123
+Train Epoch: 6 [1192/2000 (60%)]	Iteration: 7250	Loss: 0.619956
+Train Epoch: 6 [1592/2000 (80%)]	Iteration: 7300	Loss: 0.690244
+Train Epoch: 6 [1992/2000 (100%)]	Iteration: 7350	Loss: 0.415387
+Train Epoch: 7 [392/2000 (20%)]	Iteration: 7400	Loss: 0.248422
+Val set: Average loss: 0.0373
+class #0 : 0.75569
+class #1 : 0.89583
+class #2 : 0.41069
+class #3 : 0.79457
+class #4 : 0.74871
+class #5 : 0.73730
+mean_iou: 0.723796
+Train Epoch: 7 [792/2000 (40%)]	Iteration: 7450	Loss: 0.395082
+Train Epoch: 7 [1192/2000 (60%)]	Iteration: 7500	Loss: 0.252287
+Train Epoch: 7 [1592/2000 (80%)]	Iteration: 7550	Loss: 0.214839
+Train Epoch: 7 [1992/2000 (100%)]	Iteration: 7600	Loss: 0.200800
+Val set: Average loss: 0.0360
+class #0 : 0.75788
+class #1 : 0.89657
+class #2 : 0.40325
+class #3 : 0.80669
+class #4 : 0.75231
+class #5 : 0.74217
+mean_iou: 0.726478
+Train Epoch: 8 [392/2000 (20%)]	Iteration: 7650	Loss: 0.217955
+Train Epoch: 8 [792/2000 (40%)]	Iteration: 7700	Loss: 0.311151
+Train Epoch: 8 [1192/2000 (60%)]	Iteration: 7750	Loss: 0.338864
+Train Epoch: 8 [1592/2000 (80%)]	Iteration: 7800	Loss: 0.400610
+Val set: Average loss: 0.0370
+class #0 : 0.77576
+class #1 : 0.89452
+class #2 : 0.39687
+class #3 : 0.78600
+class #4 : 0.72849
+class #5 : 0.73096
+mean_iou: 0.718766
+Train Epoch: 8 [1992/2000 (100%)]	Iteration: 7850	Loss: 0.187057
+Train Epoch: 9 [392/2000 (20%)]	Iteration: 7900	Loss: 0.229162
+Train Epoch: 9 [792/2000 (40%)]	Iteration: 7950	Loss: 0.209587
+Train Epoch: 9 [1192/2000 (60%)]	Iteration: 8000	Loss: 0.331025
+Val set: Average loss: 0.0360
+class #0 : 0.76940
+class #1 : 0.89563
+class #2 : 0.42523
+class #3 : 0.79622
+class #4 : 0.71924
+class #5 : 0.73576
+mean_iou: 0.723581
+Train Epoch: 9 [1592/2000 (80%)]	Iteration: 8050	Loss: 0.262562
+Train Epoch: 9 [1992/2000 (100%)]	Iteration: 8100	Loss: 0.364126
+Train Epoch: 10 [392/2000 (20%)]	Iteration: 8150	Loss: 0.190954
+Train Epoch: 10 [792/2000 (40%)]	Iteration: 8200	Loss: 0.499655
+Val set: Average loss: 0.0365
+class #0 : 0.74970
+class #1 : 0.89546
+class #2 : 0.42977
+class #3 : 0.79025
+class #4 : 0.76014
+class #5 : 0.74495
+mean_iou: 0.728378
+Train Epoch: 10 [1192/2000 (60%)]	Iteration: 8250	Loss: 0.785910
+Train Epoch: 10 [1592/2000 (80%)]	Iteration: 8300	Loss: 0.687038
+Train Epoch: 10 [1992/2000 (100%)]	Iteration: 8350	Loss: 0.176596
+Train Epoch: 11 [392/2000 (20%)]	Iteration: 8400	Loss: 0.732259
+Val set: Average loss: 0.0374
+class #0 : 0.77974
+class #1 : 0.89514
+class #2 : 0.38850
+class #3 : 0.75154
+class #4 : 0.75795
+class #5 : 0.72954
+mean_iou: 0.717069
+Train Epoch: 11 [792/2000 (40%)]	Iteration: 8450	Loss: 0.495338
+Train Epoch: 11 [1192/2000 (60%)]	Iteration: 8500	Loss: 0.279980
+Train Epoch: 11 [1592/2000 (80%)]	Iteration: 8550	Loss: 0.231013
+Train Epoch: 11 [1992/2000 (100%)]	Iteration: 8600	Loss: 0.424111
+Val set: Average loss: 0.0429
+class #0 : 0.75826
+class #1 : 0.88055
+class #2 : 0.35909
+class #3 : 0.78982
+class #4 : 0.72158
+class #5 : 0.70700
+mean_iou: 0.702716
+Train Epoch: 12 [392/2000 (20%)]	Iteration: 8650	Loss: 0.373645
+Train Epoch: 12 [792/2000 (40%)]	Iteration: 8700	Loss: 0.162410
+Train Epoch: 12 [1192/2000 (60%)]	Iteration: 8750	Loss: 0.399726
+Train Epoch: 12 [1592/2000 (80%)]	Iteration: 8800	Loss: 0.457930
+Val set: Average loss: 0.0379
+class #0 : 0.77713
+class #1 : 0.89717
+class #2 : 0.43907
+class #3 : 0.80764
+class #4 : 0.72506
+class #5 : 0.73430
+mean_iou: 0.730062
+model saved to ckpt2/test/model.pkl-8801
+Train Epoch: 12 [1992/2000 (100%)]	Iteration: 8850	Loss: 0.217260
+Train Epoch: 13 [392/2000 (20%)]	Iteration: 8900	Loss: 0.336360
+Train Epoch: 13 [792/2000 (40%)]	Iteration: 8950	Loss: 0.249340
+Train Epoch: 13 [1192/2000 (60%)]	Iteration: 9000	Loss: 0.224852
+Val set: Average loss: 0.0384
+class #0 : 0.76348
+class #1 : 0.89480
+class #2 : 0.39313
+class #3 : 0.76299
+class #4 : 0.74411
+class #5 : 0.73820
+mean_iou: 0.716118
+Train Epoch: 13 [1592/2000 (80%)]	Iteration: 9050	Loss: 0.319204
+Train Epoch: 13 [1992/2000 (100%)]	Iteration: 9100	Loss: 0.286463
+Train Epoch: 14 [392/2000 (20%)]	Iteration: 9150	Loss: 0.284403
+Train Epoch: 14 [792/2000 (40%)]	Iteration: 9200	Loss: 0.281893
+Val set: Average loss: 0.0368
+class #0 : 0.77881
+class #1 : 0.89190
+class #2 : 0.41776
+class #3 : 0.80517
+class #4 : 0.77231
+class #5 : 0.72387
+mean_iou: 0.731637
+model saved to ckpt2/test/model.pkl-9201
+Train Epoch: 14 [1192/2000 (60%)]	Iteration: 9250	Loss: 0.172660
+Train Epoch: 14 [1592/2000 (80%)]	Iteration: 9300	Loss: 0.205503
+Train Epoch: 14 [1992/2000 (100%)]	Iteration: 9350	Loss: 0.429816
+Train Epoch: 15 [392/2000 (20%)]	Iteration: 9400	Loss: 0.282222
+Val set: Average loss: 0.0366
+class #0 : 0.78132
+class #1 : 0.89237
+class #2 : 0.41081
+class #3 : 0.79344
+class #4 : 0.75568
+class #5 : 0.72099
+mean_iou: 0.725769
+Train Epoch: 15 [792/2000 (40%)]	Iteration: 9450	Loss: 0.844951
+Train Epoch: 15 [1192/2000 (60%)]	Iteration: 9500	Loss: 0.385866
+Train Epoch: 15 [1592/2000 (80%)]	Iteration: 9550	Loss: 0.212460
+Train Epoch: 15 [1992/2000 (100%)]	Iteration: 9600	Loss: 0.261742
+Val set: Average loss: 0.0411
+class #0 : 0.75269
+class #1 : 0.89057
+class #2 : 0.30748
+class #3 : 0.76509
+class #4 : 0.69653
+class #5 : 0.72887
+mean_iou: 0.690206
+Train Epoch: 16 [392/2000 (20%)]	Iteration: 9650	Loss: 0.153611
+Train Epoch: 16 [792/2000 (40%)]	Iteration: 9700	Loss: 0.605297
+Train Epoch: 16 [1192/2000 (60%)]	Iteration: 9750	Loss: 0.365018
+Train Epoch: 16 [1592/2000 (80%)]	Iteration: 9800	Loss: 0.432731
+Val set: Average loss: 0.0354
+class #0 : 0.78303
+class #1 : 0.90091
+class #2 : 0.45630
+class #3 : 0.80357
+class #4 : 0.75914
+class #5 : 0.75418
+mean_iou: 0.742854
+model saved to ckpt2/test/model.pkl-9801
+Train Epoch: 16 [1992/2000 (100%)]	Iteration: 9850	Loss: 0.275385
+Train Epoch: 17 [392/2000 (20%)]	Iteration: 9900	Loss: 0.313462
+Train Epoch: 17 [792/2000 (40%)]	Iteration: 9950	Loss: 0.329071
+Train Epoch: 17 [1192/2000 (60%)]	Iteration: 10000	Loss: 1.049541
+Val set: Average loss: 0.0347
+class #0 : 0.77861
+class #1 : 0.90222
+class #2 : 0.45125
+class #3 : 0.77626
+class #4 : 0.73562
+class #5 : 0.74215
+mean_iou: 0.731019
+Train Epoch: 17 [1592/2000 (80%)]	Iteration: 10050	Loss: 0.220953
+Train Epoch: 17 [1992/2000 (100%)]	Iteration: 10100	Loss: 0.173983
+Train Epoch: 18 [392/2000 (20%)]	Iteration: 10150	Loss: 0.276329
+Train Epoch: 18 [792/2000 (40%)]	Iteration: 10200	Loss: 0.131759
+Val set: Average loss: 0.0351
+class #0 : 0.76885
+class #1 : 0.90130
+class #2 : 0.43895
+class #3 : 0.77526
+class #4 : 0.76409
+class #5 : 0.74853
+mean_iou: 0.732830
+Train Epoch: 18 [1192/2000 (60%)]	Iteration: 10250	Loss: 0.164622
+Train Epoch: 18 [1592/2000 (80%)]	Iteration: 10300	Loss: 0.140006
+Train Epoch: 18 [1992/2000 (100%)]	Iteration: 10350	Loss: 0.268784
+Train Epoch: 19 [392/2000 (20%)]	Iteration: 10400	Loss: 0.164525
+Val set: Average loss: 0.0351
+class #0 : 0.77694
+class #1 : 0.89663
+class #2 : 0.45179
+class #3 : 0.80682
+class #4 : 0.76597
+class #5 : 0.74798
+mean_iou: 0.741021
+Train Epoch: 19 [792/2000 (40%)]	Iteration: 10450	Loss: 0.532161
+Train Epoch: 19 [1192/2000 (60%)]	Iteration: 10500	Loss: 0.423914
+Train Epoch: 19 [1592/2000 (80%)]	Iteration: 10550	Loss: 0.361591
+Train Epoch: 19 [1992/2000 (100%)]	Iteration: 10600	Loss: 0.336940
+Val set: Average loss: 0.0403
+class #0 : 0.77066
+class #1 : 0.88411
+class #2 : 0.33866
+class #3 : 0.80615
+class #4 : 0.77016
+class #5 : 0.72271
+mean_iou: 0.715408
+Train Epoch: 20 [392/2000 (20%)]	Iteration: 10650	Loss: 0.298039
+Train Epoch: 20 [792/2000 (40%)]	Iteration: 10700	Loss: 0.262160
+Train Epoch: 20 [1192/2000 (60%)]	Iteration: 10750	Loss: 0.364180
+Train Epoch: 20 [1592/2000 (80%)]	Iteration: 10800	Loss: 0.496299
+Val set: Average loss: 0.0362
+class #0 : 0.76213
+class #1 : 0.89387
+class #2 : 0.44168
+class #3 : 0.79891
+class #4 : 0.74846
+class #5 : 0.73799
+mean_iou: 0.730506
+Train Epoch: 20 [1992/2000 (100%)]	Iteration: 10850	Loss: 0.212675
+Train Epoch: 21 [392/2000 (20%)]	Iteration: 10900	Loss: 0.242736
+Train Epoch: 21 [792/2000 (40%)]	Iteration: 10950	Loss: 0.364065
+Train Epoch: 21 [1192/2000 (60%)]	Iteration: 11000	Loss: 0.286215
+Val set: Average loss: 0.0356
+class #0 : 0.77100
+class #1 : 0.90077
+class #2 : 0.42974
+class #3 : 0.79473
+class #4 : 0.76208
+class #5 : 0.72241
+mean_iou: 0.730123
+Train Epoch: 21 [1592/2000 (80%)]	Iteration: 11050	Loss: 0.389567
+Train Epoch: 21 [1992/2000 (100%)]	Iteration: 11100	Loss: 0.159543
+Train Epoch: 22 [392/2000 (20%)]	Iteration: 11150	Loss: 0.161637
+Train Epoch: 22 [792/2000 (40%)]	Iteration: 11200	Loss: 0.203926
+Val set: Average loss: 0.0377
+class #0 : 0.76393
+class #1 : 0.89669
+class #2 : 0.42774
+class #3 : 0.79676
+class #4 : 0.75532
+class #5 : 0.72585
+mean_iou: 0.727713
+Train Epoch: 22 [1192/2000 (60%)]	Iteration: 11250	Loss: 0.177076
+Train Epoch: 22 [1592/2000 (80%)]	Iteration: 11300	Loss: 0.310657
+Train Epoch: 22 [1992/2000 (100%)]	Iteration: 11350	Loss: 0.346001
+Train Epoch: 23 [392/2000 (20%)]	Iteration: 11400	Loss: 0.248659
+Val set: Average loss: 0.0361
+class #0 : 0.77026
+class #1 : 0.89449
+class #2 : 0.43887
+class #3 : 0.81915
+class #4 : 0.75714
+class #5 : 0.71815
+mean_iou: 0.733010
+Train Epoch: 23 [792/2000 (40%)]	Iteration: 11450	Loss: 0.267979
+Train Epoch: 23 [1192/2000 (60%)]	Iteration: 11500	Loss: 0.215752
+Train Epoch: 23 [1592/2000 (80%)]	Iteration: 11550	Loss: 0.163867
+Train Epoch: 23 [1992/2000 (100%)]	Iteration: 11600	Loss: 0.210123
+Val set: Average loss: 0.0440
+class #0 : 0.76414
+class #1 : 0.87243
+class #2 : 0.29372
+class #3 : 0.78789
+class #4 : 0.68871
+class #5 : 0.70953
+mean_iou: 0.686070
+Train Epoch: 24 [392/2000 (20%)]	Iteration: 11650	Loss: 0.252500
+Train Epoch: 24 [792/2000 (40%)]	Iteration: 11700	Loss: 0.294616
+Train Epoch: 24 [1192/2000 (60%)]	Iteration: 11750	Loss: 0.281714
+Train Epoch: 24 [1592/2000 (80%)]	Iteration: 11800	Loss: 0.346068
+Val set: Average loss: 0.0354
+class #0 : 0.76940
+class #1 : 0.89831
+class #2 : 0.42733
+class #3 : 0.80321
+class #4 : 0.73218
+class #5 : 0.72726
+mean_iou: 0.726281
+Train Epoch: 24 [1992/2000 (100%)]	Iteration: 11850	Loss: 0.148615
+Train Epoch: 25 [392/2000 (20%)]	Iteration: 11900	Loss: 0.273203
+Train Epoch: 25 [792/2000 (40%)]	Iteration: 11950	Loss: 0.200715
+Train Epoch: 25 [1192/2000 (60%)]	Iteration: 12000	Loss: 0.204835
+Val set: Average loss: 0.0360
+class #0 : 0.77224
+class #1 : 0.90406
+class #2 : 0.42373
+class #3 : 0.83464
+class #4 : 0.76476
+class #5 : 0.71103
+mean_iou: 0.735076
+Epoch    32: reducing learning rate of group 0 to 1.0000e-05.
+Train Epoch: 25 [1592/2000 (80%)]	Iteration: 12050	Loss: 0.258507
+Train Epoch: 25 [1992/2000 (100%)]	Iteration: 12100	Loss: 0.218053
+Train Epoch: 26 [392/2000 (20%)]	Iteration: 12150	Loss: 0.195124
+Train Epoch: 26 [792/2000 (40%)]	Iteration: 12200	Loss: 0.324875
+Val set: Average loss: 0.0341
+class #0 : 0.77608
+class #1 : 0.90939
+class #2 : 0.44211
+class #3 : 0.84127
+class #4 : 0.78138
+class #5 : 0.72226
+mean_iou: 0.745417
+model saved to ckpt2/test/model.pkl-12201
